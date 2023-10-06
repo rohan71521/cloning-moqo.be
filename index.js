@@ -57,7 +57,7 @@ const tl = gsap.timeline();
         onLoad:time()
     })
     tl.to("#loader",{
-        transform:"translateY(-100%)",
+        transform:"translateY(-200%)",
         duration:1.5,      
     })
 
@@ -73,5 +73,14 @@ gsap.to("#page1 h1",{
         end:"top -200%",
         scrub:3,
         pin:true
+    }
+})
+
+gsap.to("#page4 img",{
+    transform:"translateY(-100%)",
+    scrollTrigger:{
+        trigger:"#page4",
+        scroller:"#main",
+        scrub:3
     }
 })
